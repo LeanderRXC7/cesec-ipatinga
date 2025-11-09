@@ -1,0 +1,15 @@
+{
+  "/_not-found/page": "app/_not-found/page.js",
+  "/area-do-aluno/page": "app/area-do-aluno/page.js",
+  "/autorizacao/page": "app/autorizacao/page.js",
+  "/documentos/page": "app/documentos/page.js",
+  "/contato/page": "app/contato/page.js",
+  "/banca-examinadora/page": "app/banca-examinadora/page.js",
+  "/inscricao/page": "app/inscricao/page.js",
+  "/modalidades/page": "app/modalidades/page.js",
+  "/page": "app/page.js",
+  "/programa-estudo/page": "app/programa-estudo/page.js",
+  "/sobre/page": "app/sobre/page.js",
+  "/banca-examinadora/faq/page": "app/banca-examinadora/faq/page.js",
+  "/faq/page": "app/faq/page.js"
+}

@@ -1,0 +1,119 @@
+{
+  "version": 3,
+  "pages404": true,
+  "caseSensitive": false,
+  "basePath": "",
+  "redirects": [
+    {
+      "source": "/:path+/",
+      "destination": "/:path+",
+      "internal": true,
+      "statusCode": 308,
+      "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$"
+    }
+  ],
+  "headers": [],
+  "rewrites": {
+    "beforeFiles": [],
+    "afterFiles": [],
+    "fallback": []
+  },
+  "dynamicRoutes": [],
+  "staticRoutes": [
+    {
+      "page": "/",
+      "regex": "^/(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/(?:/)?$"
+    },
+    {
+      "page": "/_not-found",
+      "regex": "^/_not\\-found(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_not\\-found(?:/)?$"
+    },
+    {
+      "page": "/area-do-aluno",
+      "regex": "^/area\\-do\\-aluno(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/area\\-do\\-aluno(?:/)?$"
+    },
+    {
+      "page": "/autorizacao",
+      "regex": "^/autorizacao(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/autorizacao(?:/)?$"
+    },
+    {
+      "page": "/banca-examinadora",
+      "regex": "^/banca\\-examinadora(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/banca\\-examinadora(?:/)?$"
+    },
+    {
+      "page": "/banca-examinadora/faq",
+      "regex": "^/banca\\-examinadora/faq(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/banca\\-examinadora/faq(?:/)?$"
+    },
+    {
+      "page": "/contato",
+      "regex": "^/contato(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/contato(?:/)?$"
+    },
+    {
+      "page": "/documentos",
+      "regex": "^/documentos(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/documentos(?:/)?$"
+    },
+    {
+      "page": "/faq",
+      "regex": "^/faq(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/faq(?:/)?$"
+    },
+    {
+      "page": "/inscricao",
+      "regex": "^/inscricao(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/inscricao(?:/)?$"
+    },
+    {
+      "page": "/modalidades",
+      "regex": "^/modalidades(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/modalidades(?:/)?$"
+    },
+    {
+      "page": "/programa-estudo",
+      "regex": "^/programa\\-estudo(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/programa\\-estudo(?:/)?$"
+    },
+    {
+      "page": "/sobre",
+      "regex": "^/sobre(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/sobre(?:/)?$"
+    }
+  ],
+  "dataRoutes": [],
+  "rsc": {
+    "header": "rsc",
+    "varyHeader": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+    "prefetchHeader": "next-router-prefetch",
+    "didPostponeHeader": "x-nextjs-postponed",
+    "contentTypeHeader": "text/x-component",
+    "suffix": ".rsc",
+    "prefetchSuffix": ".prefetch.rsc",
+    "prefetchSegmentHeader": "next-router-segment-prefetch",
+    "prefetchSegmentSuffix": ".segment.rsc",
+    "prefetchSegmentDirSuffix": ".segments"
+  },
+  "rewriteHeaders": {
+    "pathHeader": "x-nextjs-rewritten-path",
+    "queryHeader": "x-nextjs-rewritten-query"
+  }
+}
