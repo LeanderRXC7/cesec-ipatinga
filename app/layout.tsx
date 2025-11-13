@@ -21,6 +21,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
+      <head>
+        <link rel="icon" href="/favicon.png" />
+      </head>
       <body className={`font-sans antialiased`}>
         {children}
         <Analytics />
