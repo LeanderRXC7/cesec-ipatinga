@@ -14,8 +14,8 @@ export function Navigation() {
     { href: "/modalidades", label: "Modalidades" },
     { href: "/inscricao", label: "Inscrição" },
     { href: "/contato", label: "Contato" },
-    { href: "/area-do-aluno", label: "Área do Aluno" },
     { href: "/banca-examinadora", label: "Banca Examinadora" },
+    { href: "/area-do-aluno", label: "Área do Aluno" },
   ]
 
   return (
