@@ -5,7 +5,8 @@ import type React from "react"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { useState } from "react"
-import { Phone, MapPin, Clock, ExternalLink } from "lucide-react"
+import { Phone, MapPin, Clock, ExternalLink, ArrowLeft} from "lucide-react"
+import Link from "next/link"
 
 export default function Contato() {
   const [formData, setFormData] = useState({
@@ -33,6 +34,13 @@ export default function Contato() {
         {/* Header */}
         <section className="bg-primary text-primary-foreground py-12 md:py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <Link
+              href="/"
+              className="inline-flex items-center gap-2 text-primary-foreground/80 hover:text-primary-foreground mb-6 transition-colors"
+            >
+              <ArrowLeft size={18} />
+              Voltar
+            </Link>
             <h1 className="text-4xl md:text-5xl font-bold mb-4">Entre em Contato</h1>
             <p className="text-lg text-primary-foreground/90">
               Estamos prontos para ajudar você a dar o próximo passo na sua educação.
