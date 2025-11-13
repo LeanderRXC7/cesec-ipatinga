@@ -9,13 +9,17 @@ export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
 
   const links = [
-    { href: "/", label: "Início" },
-    { href: "/sobre", label: "Sobre" },
-    { href: "/modalidades", label: "Modalidades" },
-    { href: "/inscricao", label: "Inscrição" },
-    { href: "/contato", label: "Contato" },
-    { href: "/banca-examinadora", label: "Banca Examinadora" },
-    { href: "/area-do-aluno", label: "Área do Aluno" },
+    { href: "/", label: "Início", className: "flex items-center" },
+    { href: "/sobre", label: "Sobre", className: "flex items-center" },
+    { href: "/modalidades", label: "Modalidades", className: "flex items-center" },
+    { href: "/inscricao", label: "Inscrição", className: "flex items-center" },
+    { href: "/contato", label: "Contato", className: "flex items-center" },
+    { href: "/banca-examinadora", label: "Banca Examinadora", className: "flex items-center" },
+    { 
+      href: "/area-do-aluno", 
+      label: "Área do Aluno", 
+      className: "bg-white text-[rgb(16,78,100)] rounded-lg px-4 py-2 shadow-md hover:bg-[rgb(16,78,100)]/10 transition-colors text-center align-middle flex items-center"
+    },
   ]
 
   return (
@@ -32,7 +36,7 @@ export function Navigation() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="hover:text-accent transition-colors text-sm font-medium"
+                className={`hover:text-accent transition-colors text-sm font-medium ${link.className || ""}`}
               >
                 {link.label}
               </Link>
@@ -56,7 +60,7 @@ export function Navigation() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="block px-4 py-2 hover:bg-primary-foreground/10 rounded-lg transition-colors text-sm"
+                className={`block px-4 py-2 hover:bg-primary-foreground/10 rounded-lg transition-colors text-sm ${link.className || ""}`}
                 onClick={() => setIsOpen(false)}
               >
                 {link.label}

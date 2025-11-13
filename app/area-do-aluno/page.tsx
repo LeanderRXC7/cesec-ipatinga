@@ -180,7 +180,7 @@ export default function AreaDoAluno() {
 
         {/* Guidelines Section */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold text-primary mb-8">Orientações para Alunos 2025</h2>
+          <h2 className="text-3xl font-bold text-primary mb-8">Orientações para Alunos</h2>
           <div className="space-y-4">
             {guidelines.map((guideline, index) => (
               <div key={index} className="border-l-4 border-primary rounded-lg overflow-hidden shadow">
