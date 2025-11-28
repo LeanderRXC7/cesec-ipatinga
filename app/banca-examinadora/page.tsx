@@ -8,6 +8,8 @@ export default function BancaExaminadora() {
     <>
       <Navigation />
 
+      
+
       <main>
         {/* Header */}
         <section className="bg-gradient-to-br from-primary to-secondary text-primary-foreground py-16 md:py-24">
@@ -22,6 +24,18 @@ export default function BancaExaminadora() {
             <h1 className="text-4xl md:text-5xl font-bold text-balance">Banca Examinadora</h1>
           </div>
         </section>
+
+        {/* Botão de Resultados */}
+      <div className="bg-accent/10 text-accent-foreground text-center py-4">
+        <Link
+          href="https://sites.google.com/view/cesecipatingaresultados/p%C3%A1gina-inicial"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block px-6 py-3 bg-primary text-primary-foreground font-semibold rounded-lg hover:bg-primary/90 transition-colors"
+        >
+          Confira os Aprovados
+        </Link>
+      </div>
 
         {/* Content */}
         <section className="py-16 md:py-24 bg-background">

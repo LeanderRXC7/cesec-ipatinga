@@ -7,6 +7,68 @@ import { ChevronDown } from "lucide-react"
 export default function AreaDoAluno() {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null)
 
+  // ====== HORÁRIO TARDE ======
+  const afternoonScheduleData = [
+    {
+      day: "2ª feira",
+      disciplines: [
+        "MATEMÁTICA",
+        "HISTÓRIA",
+        "FILOSOFIA²",
+        "ENSINO RELIGIOSO¹",
+        "QUÍMICA²",
+        "GEOGRAFIA 12h:30 às 18h",
+        "PORTUGUÊS",
+      ],
+    },
+    {
+      day: "3ª feira",
+      disciplines: [
+        "GEOGRAFIA 12h:30 às 18h",
+        "SOCIOLOGIA²",
+        "APROFUNDAMENTO INTEGRADO²",
+        "ARTE",
+        "FÍSICA²",
+        "PROJETO DE VIDA",
+        "ENSINO RELIGIOSO¹",
+      ],
+    },
+    {
+      day: "4ª feira",
+      disciplines: [
+        "FÍSICA²",
+        "PROJETO DE VIDA",
+        "PORTUGUÊS",
+        "BIOLOGIA/ CIÊNCIAS",
+        "SAÚDE E BEM-ESTAR²",
+        "FILOSOFIA",
+      ],
+    },
+    {
+      day: "5ª feira",
+      disciplines: [
+        "INGLÊS",
+        "REDAÇÃO PARA O ENEM²",
+        "HISTÓRIA",
+        "SOCIOLOGIA²",
+        "APROFUNDAMENTO INTEGRADO²",
+      ],
+    },
+    {
+      day: "6ª feira",
+      disciplines: [
+        "BIOLOGIA/ CIÊNCIAS",
+        "SAÚDE E BEM-ESTAR²",
+        "QUÍMICA²",
+        "ARTE",
+        "MATEMÁTICA",
+        "INGLÊS",
+        "REDAÇÃO PARA O ENEM²",
+      ],
+    },
+  ]
+
+  // ====== HORÁRIO NOITE (seu original) ======
   const scheduleData = [
     {
       day: "2ª feira",
@@ -33,7 +95,15 @@ export default function AreaDoAluno() {
     },
     {
       day: "4ª feira",
-      disciplines: ["FILOSOFIA²", "QUÍMICA²", "INGLÊS", "REDAÇÃO PARA ENEM²", "ARTE", "HISTÓRIA", "ENSINO RELIGIOSO¹"],
+      disciplines: [
+        "FILOSOFIA²",
+        "QUÍMICA²",
+        "INGLÊS",
+        "REDAÇÃO PARA ENEM²",
+        "ARTE",
+        "HISTÓRIA",
+        "ENSINO RELIGIOSO¹",
+      ],
     },
     {
       day: "5ª feira",
@@ -114,9 +184,11 @@ export default function AreaDoAluno() {
       </div>
 
       <div className="max-w-4xl mx-auto px-4 py-12">
-        {/* Horário Section */}
+        {/* Horário TARDE */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold text-primary mb-8">Horário de Aulas - Noite (18:00 às 21:27)</h2>
+          <h2 className="text-3xl font-bold text-primary mb-8">
+            Horário de Aulas - Tarde (13:00 às 16:27)
+          </h2>
           <div className="bg-white rounded-lg overflow-hidden shadow-lg border border-gray-200">
             <div className="overflow-x-auto">
               <table className="w-full">
@@ -132,7 +204,7 @@ export default function AreaDoAluno() {
                 <tbody>
                   {[0, 1, 2, 3, 4, 5, 6].map((rowIndex) => (
                     <tr key={rowIndex} className="border-b border-gray-200 hover:bg-blue-50 transition-colors">
-                      {scheduleData.map((dayData, dayIndex) => (
+                      {afternoonScheduleData.map((dayData, dayIndex) => (
                         <td key={dayIndex} className="px-4 py-3 text-sm text-gray-700">
                           {dayData.disciplines[rowIndex] && (
                             <div
@@ -140,8 +212,8 @@ export default function AreaDoAluno() {
                                 dayData.disciplines[rowIndex].includes("²")
                                   ? "bg-yellow-100 text-yellow-900"
                                   : dayData.disciplines[rowIndex].includes("¹")
-                                    ? "bg-red-100 text-red-900"
-                                    : "bg-blue-100 text-blue-900"
+                                  ? "bg-red-100 text-red-900"
+                                  : "bg-blue-100 text-blue-900"
                               }`}
                             >
                               {dayData.disciplines[rowIndex]}
@@ -178,7 +250,73 @@ export default function AreaDoAluno() {
           </div>
         </section>
 
-        {/* Guidelines Section */}
+        {/* Horário NOITE (igual estava) */}
+        <section className="mb-16">
+          <h2 className="text-3xl font-bold text-primary mb-8">
+            Horário de Aulas - Noite (18:00 às 21:27)
+          </h2>
+          <div className="bg-white rounded-lg overflow-hidden shadow-lg border border-gray-200">
+            <div className="overflow-x-auto">
+              <table className="w-full">
+                <thead>
+                  <tr className="bg-primary text-white">
+                    <th className="px-4 py-3 text-left font-semibold">2ª feira</th>
+                    <th className="px-4 py-3 text-left font-semibold">3ª feira</th>
+                    <th className="px-4 py-3 text-left font-semibold">4ª feira</th>
+                    <th className="px-4 py-3 text-left font-semibold">5ª feira</th>
+                    <th className="px-4 py-3 text-left font-semibold">6ª feira</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {[0, 1, 2, 3, 4, 5, 6].map((rowIndex) => (
+                    <tr key={rowIndex} className="border-b border-gray-200 hover:bg-blue-50 transition-colors">
+                      {scheduleData.map((dayData, dayIndex) => (
+                        <td key={dayIndex} className="px-4 py-3 text-sm text-gray-700">
+                          {dayData.disciplines[rowIndex] && (
+                            <div
+                              className={`py-1 px-2 rounded text-xs font-medium ${
+                                dayData.disciplines[rowIndex].includes("²")
+                                  ? "bg-yellow-100 text-yellow-900"
+                                  : dayData.disciplines[rowIndex].includes("¹")
+                                  ? "bg-red-100 text-red-900"
+                                  : "bg-blue-100 text-blue-900"
+                              }`}
+                            >
+                              {dayData.disciplines[rowIndex]}
+                            </div>
+                          )}
+                        </td>
+                      ))}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div className="mt-6 bg-gray-50 rounded-lg p-4">
+            <p className="font-semibold text-gray-800 mb-3">Legenda:</p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-3 text-sm">
+              <div className="flex items-center gap-2">
+                <span className="bg-blue-100 text-blue-900 px-3 py-1 rounded text-xs font-medium">Fundamental</span>
+                <span className="text-gray-600">Disciplinas do Ensino Fundamental</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="bg-yellow-100 text-yellow-900 px-3 py-1 rounded text-xs font-medium">²</span>
+                <span className="text-gray-600">Apenas Ensino Médio</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="bg-red-100 text-red-900 px-3 py-1 rounded text-xs font-medium">¹</span>
+                <span className="text-gray-600">Apenas Fundamental e Médio</span>
+              </div>
+            </div>
+            <p className="text-xs text-gray-600 mt-3">
+              Disciplinas destacadas em amarelo: professores em atendimento online
+            </p>
+          </div>
+        </section>
+
+        {/* Orientações */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-primary mb-8">Orientações para Alunos</h2>
           <div className="space-y-4">
@@ -204,7 +342,7 @@ export default function AreaDoAluno() {
           </div>
         </section>
 
-        {/* Enrollment Documents Section */}
+        {/* Documentos para matrícula */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-primary mb-8">Documentos para Matrícula</h2>
           <div className="bg-blue-50 border-2 border-primary rounded-lg p-8">
@@ -219,7 +357,7 @@ export default function AreaDoAluno() {
           </div>
         </section>
 
-        {/* Important Information */}
+        {/* Informações importantes */}
         <section className="mb-16">
           <div className="bg-yellow-50 border-l-4 border-yellow-500 p-6 rounded-lg">
             <h3 className="font-bold text-lg text-gray-800 mb-4">Informações Importantes</h3>
@@ -233,7 +371,7 @@ export default function AreaDoAluno() {
           </div>
         </section>
 
-        {/* Back Button */}
+        {/* Botão voltar */}
         <div className="flex justify-center mt-12">
           <Link href="/" className="inline-block">
             <button className="bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors">
